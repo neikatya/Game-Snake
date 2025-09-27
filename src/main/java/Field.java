@@ -23,13 +23,13 @@ public class Field {
         checkBorder(newHead);
         checkTail(newHead);
 
-        //
+
         if (applesOnField.containsKey(newHead)) {
             snake.eating(applesOnField.get(newHead));
             applesOnField.remove(newHead);
             addApple(generateAppleCoordinates(), generateApple());
         }
-        //
+
         snakeCoordinates.addFirst(newHead);
         while (snake.getLength() < snakeCoordinates.size()) {
             snakeCoordinates.removeLast();

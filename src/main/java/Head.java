@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 public class Head {
     private Direction direction;
 
@@ -31,3 +29,4 @@ public class Head {
         return direction;
     }
 }
+

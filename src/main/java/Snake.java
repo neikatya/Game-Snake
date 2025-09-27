@@ -31,7 +31,7 @@ public class Snake {
     }
 
     public void eating(Apple apple){
-        tail.increase(apple.satiety);
+        tail.increase(apple.satiety());
     }
 
     public void turnTo(Direction direction) {

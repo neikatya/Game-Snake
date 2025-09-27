@@ -49,9 +49,7 @@ public class Game extends JPanel implements ActionListener {
 
         } else{
             String str = "Game Over";
-            //Font f = new Font("Arial",14,Font.BOLD);
             g.setColor(Color.white);
-            // g.setFont(f);
             g.drawString(str,125,SIZE*16/2);
         }
     }
@@ -64,10 +62,18 @@ public class Game extends JPanel implements ActionListener {
                 field.moveSnake();
             } catch (RuntimeException exception) {
                 //string = exception.getMessage();
-                inGame = false;
+                endGame();
             }
         }
         repaint();
+    }
+    
+    public void endGame() {
+        inGame = false;
+    }
+
+    public boolean getStateOfGame(){
+        return inGame;
     }
 
 
